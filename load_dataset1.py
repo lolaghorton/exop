@@ -2,6 +2,7 @@ from torch.utils.data import Dataset
 import numpy as np
 import glob
 
+#need to create those labels of positive and negative, fix within make_train_dataset.py i believe. idk i followed you tube tutorials tbh
 class lcDataset(Dataset):
     def __init__(self, data_folder, label_dict):
         self.files = glob.glob(f"{data_folder}/TIC_*.npy")
