@@ -89,6 +89,26 @@ for _, row in df.iterrows():
         print(f"error processing TIC {tic}: {e}")
         continue
 
+'''
+processing TIC 150030205 (CP -> positive)
+Warning: aperture mask contains zero pixels.
+/home/lola/exop/.venv/lib64/python3.13/site-packages/lightkurve/utils.py:118: RuntimeWarning: invalid value encountered in scalar divide
+  percent_masked = 100.0 * n_cadences_masked / n_cadences
+/home/lola/exop/.venv/lib64/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/lola/exop/.venv/lib64/python3.13/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/home/lola/exop/.venv/lib64/python3.13/site-packages/astropy/units/quantity.py:1889: RuntimeWarning: All-NaN slice encountered
+  result = super().__array_function__(function, types, args, kwargs)
+/home/lola/exop/.venv/lib64/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:2015: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+error processing TIC 150030205: cannot reshape array of size 0 into shape (0,newaxis)
+'''
+#still got this error but i though the checks i had wouldve made this just send a skipping over print statement, few diff ones do this too
+#theres also A LOT of these that are skipping because the flux is too short, and so maybe ill rerun it without trimming it and use the autosizing in torch
+
+
+
 
 
 
