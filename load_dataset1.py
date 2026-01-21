@@ -30,8 +30,8 @@ class LightCurveDataset(Dataset):
         """
         root_dir options:
             processed_lcs/train
-            processed_lcs/infer
             processed_lcs/test
+            processed_lcs/validation
         """
         self.data = []
 

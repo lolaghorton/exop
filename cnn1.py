@@ -90,6 +90,7 @@ prob = torch.sigmoid(output)
 class decentCNN(nn.Module):
     ''' 1D convolutional neural network model for light curve dataset made of .npy
         Mimics layout described in figure 3 of olm 2021 '''
+    
     def __init__(self, input_length: int = 1000):
         super().__init__() #what does super do?
         self.input_length = input_length #input len of lc, ive hardcoded 1000 points
